@@ -51,7 +51,9 @@ def minWindow(s, t):
 # print(minWindow(s, t))
 
 
-
+"""
+neet code solution for the problem
+"""
 def minWindowNeetCode(s,t):
     if t == "":
         return ""

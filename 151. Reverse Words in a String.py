@@ -11,8 +11,16 @@ def reverseWords(s):
         while ind < len(s) and s[ind] != " ":
             word += s[ind]
             ind += 1
-        res = word + " " + res
+        if word != "":
+            if res == "":
+                res = word
+            else:
+                res = word + " " + res
     # print(res)
     return res 
 
 reverseWords("the sky is blue")
+print(reverseWords("  hello world  "))
+print(reverseWords("a good   example"))
+print(reverseWords("  Bob    Loves  Alice   "))
+print(reverseWords("Alice does not even like bob"))

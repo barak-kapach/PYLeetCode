@@ -5,7 +5,7 @@ def groupAnagrams(strs):
         d = dict()
 
         for s in strs:
-            sorted_string = ''.join(sorted(s))
+            sorted_string = str(''.join(sorted(s)))
             if sorted_string in d:
                 d[sorted_string] += [s]
             else:
@@ -28,3 +28,17 @@ def groupWithCountingStrategy(strs):
     for key in d:
         res.append(d[key])
     return res
+
+#tests
+print(groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
+print(groupWithCountingStrategy(["eat","tea","tan","ate","nat","bat"]))
+print(groupAnagrams([""]))
+print(groupWithCountingStrategy([""]))
+print(groupAnagrams(["a"]))
+print(groupWithCountingStrategy(["a"]))
+print(groupAnagrams(["ab","ba"]))
+print(groupWithCountingStrategy(["ab","ba"]))
+print(groupAnagrams(["ab","ba",""]))
+print(groupWithCountingStrategy(["ab","ba",""]))
+print(groupAnagrams(["ab","ba","a"]))
+print(groupWithCountingStrategy(["ab","ba","a"]))

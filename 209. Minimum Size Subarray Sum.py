@@ -1,3 +1,6 @@
+"""
+neet code solution for the problem
+"""
 def minSubArrayLen(target, nums):
     best_counter = len(nums) + 1
     cur_sum = 0
